@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> design Principles </title>  
+    <meta charset="UTF-8">
+  
+</head>
+<style>
+    
+    .context{
+        color: yellow;
+    }
+    div{
+        
+        padding: 2px 2px 2px 2px;
+        width: 100%;
+        margin: 10px auto;
+        width: 60%;
+    }
+    .fullWidth{
+        width: auto;
+    }
+    body {
+        background-image: url('https://images.wallpaperscraft.com/image/single/gradient_abstraction_pink_256766_1920x1080.jpg');
+    }
+    #buttons{
+        width: 30%;
+        text-align: center;
+        margin: 10px auto;
+        
+    }
+    .btn {
+        cursor: pointer;
+        border: 1px solid #3498db;
+        background-color: transparent;
+        height: 25px;
+        width: 100px;
+        color: #3498db;
+        font-size: 1.5em;
+        box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+    }
+</style>
+<body onload="onLoad()">
+    
+  <h1> Design Principles </h1>
+  <div id="buttons">
+    <input type=button class="btn" onclick="button1()" id="button1" value="Module 1">
+  </div>
+    <div id="div1" >
+        <h2 class="context"> Module 1</h2>
+        <ol class="context">
+
+            <li>Thinking about what users are good at and bad at</li>
+            <li>Learn about your users</li>
+            <li>Listen to diferent ideas</li>
+            <li>Be aware of cultural diferences </li>
+            <li>Be fair ,Open,and Equal to everybody</li>
+            <li>Better Safe than sorry</li>
+            <li>Be simple as posible</li>
+            <li>Things should be easy to discover</li>
+            <li>Your product is not a maze so dont complicate it </li>
+            <li>Light the road for your users</li>
+            <li>Confirm the actions taken</li>
+            <li>Be consistant in your elements</li>
+
+        </ol>
+    </div>
+    <div id="div2">
+        <h2 class="context"> Module 2 </h2>      
+        <ol class="context">
+            
+            <li>Is normal to see problems</li>
+            <li>there are many solutions to a problem</li>
+            <li>Comunicate to other people that arent the original designer</li>
+            <li>Understand the problem space</li>
+            <li>spend time reflecting on ideas</li>
+            <li>Dont let users soley dictate your course you are the captain</li>
+            <li>things change over time dont sweat it to much</li>
+
+        </ol>    
+    </div>
+    
+    <div id="div3" >
+        <h2 class="context"> Module 3</h2>       
+        
+    </div>
+    
+    <div id="div4" >    
+        <p> This is the fourth division. </p>
+    </div>
+    <div id="div5" >        
+        <p> This is the fifth division. </p>
+    </div>
+    <div id="div6" >   
+             
+    </div>
+     
+    
+
+    <footer>
+        
+        
+        <small> &copy; R. Villalobos, March 20,2023  </small>
+    
+    </footer> 
+    <script>
+        globalAuthor="Ricardo Villalobos";
+
+        function onLoad(){
+            
+            document.getElementById("div1").style.display='none';
+            document.getElementById("div2").style.display='none';
+            document.getElementById("div3").style.display='none';
+            document.getElementById("div4").style.display='none';
+            document.getElementById("div5").style.display='none';
+            document.getElementById("div6").style.display='none';
+            
+        }
+
+        function button1(){
+
+            but1 = document.getElementById("button1");
+
+            if (but1.value == "Module 1 On"){
+                but1.value = "Module 1 Off";
+                document.getElementById("div1").style.display='block';
+            } else {
+                but1.value= "Module 1 On";
+
+                document.getElementById("div1").style.display='none';
+            }
+        }
+        function button2(){
+            
+        }
+
+
+
+    </script>
+</body>
+</html>
