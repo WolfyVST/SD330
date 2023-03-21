@@ -8,14 +8,19 @@
 <style>
     
     .context{
-        color: yellow;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    h2{
+        color: rgb(255, 255, 255);
+        text-align: center;
     }
     div{
         
         padding: 2px 2px 2px 2px;
-        width: 100%;
+        width: 30%;
         margin: 10px auto;
-        width: 60%;
+        
     }
     .fullWidth{
         width: auto;
@@ -24,7 +29,7 @@
         background-image: url('https://images.wallpaperscraft.com/image/single/gradient_abstraction_pink_256766_1920x1080.jpg');
     }
     #buttons{
-        width: 30%;
+        width: auto;
         text-align: center;
         margin: 10px auto;
         
@@ -34,21 +39,29 @@
         border: 1px solid #3498db;
         background-color: transparent;
         height: 25px;
-        width: 100px;
+        width: 125px;
         color: #3498db;
-        font-size: 1.5em;
+        font-size: 1em;
         box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+        
     }
 </style>
 <body onload="onLoad()">
     
-  <h1> Design Principles </h1>
+  <h1 style="color: #3498db;"> Design Principles </h1>
   <div id="buttons">
     <input type=button class="btn" onclick="button1()" id="button1" value="Module 1">
+    <input type=button class="btn" onclick="button2()" id="button2" value="Module 2">
+    <input type=button class="btn" onclick="button3()" id="button3" value="Module 3">
+    <input type=button class="btn" onclick="button4()" id="button4" value="Module 4">
+    <input type=button class="btn" onclick="button5()" id="button5" value="Module 5">
+    <input type=button class="btn" onclick="button6()" id="button6" value="Module 6">
+    
+
   </div>
     <div id="div1" >
-        <h2 class="context"> Module 1</h2>
-        <ol class="context">
+        <h2> Module 1</h2>
+        <ul class="context">
 
             <li>Thinking about what users are good at and bad at</li>
             <li>Learn about your users</li>
@@ -63,11 +76,11 @@
             <li>Confirm the actions taken</li>
             <li>Be consistant in your elements</li>
 
-        </ol>
+        </ul>
     </div>
     <div id="div2">
-        <h2 class="context"> Module 2 </h2>      
-        <ol class="context">
+        <h2> Module 2 </h2>      
+        <ul class="context">
             
             <li>Is normal to see problems</li>
             <li>there are many solutions to a problem</li>
@@ -77,23 +90,51 @@
             <li>Dont let users soley dictate your course you are the captain</li>
             <li>things change over time dont sweat it to much</li>
 
-        </ol>    
+        </ul>    
     </div>
     
     <div id="div3" >
-        <h2 class="context"> Module 3</h2>       
-        
+        <h2> Module 3</h2>       
+        <ul class="context">
+            <li>Be carefull taking something for granted that requires further investigation</li>
+            <li>Writing down your assumptions and claims and then trying to defend and support them can highlight those that are vague or wanting</li>
+            <li>Be aware of new perspectives to solve a problem</li>
+            <li>to establish a set of common terms that all can understand and agree upon, reducing the chance of misunderstandings and confusion</li>
+            <li>Be asertive on the direction of the design</li>   
+        </ul>
     </div>
     
     <div id="div4" >    
-        <p> This is the fourth division. </p>
+        <h2> Module 4</h2>
+        <ul class="context">
+            <li>Have A clear goal</li>
+            <li>Be organised and make things easier to be understood</li>
+            <li>Have a clear way of telling things apart</li>
+            <li>Understaind how technologies and services work</li>
+            <li>Make Clear and easy-to-follow instructions</li>
+            <li>Identify your Users</li>
+            <li>Have good realation with your users</li>
+        </ul>
     </div>
     <div id="div5" >        
-        <p> This is the fifth division. </p>
+        <h2> Module 5</h2>
+        <ul class="context">
+            <li>Be aware of how emotions afact users</li>
+            <li>Be atentive of what or how to present information to the user</li>
+            <li>Understand how emotions work for better UX</li>
+            <li>Use different ways of conveying expressivity</li>
+        </ul>
     </div>
     <div id="div6" >   
-             
+        <h2> Module 6</h2>
+        <ul class="context">
+            <li>Show more options for more flexibility</li>
+            <li>Make sure you follow your theme</li>
+            <li>make your Icon Consistand with the app</li>
+            <li>Use instances of multimedia but dont crowd your app</li>
+        </ul>
     </div>
+    
      
     
 
@@ -115,27 +156,84 @@
             document.getElementById("div5").style.display='none';
             document.getElementById("div6").style.display='none';
             
+            
         }
 
         function button1(){
 
             but1 = document.getElementById("button1");
-
-            if (but1.value == "Module 1 On"){
-                but1.value = "Module 1 Off";
+            
+            if (but1.value == "Module 1 Off "){
+                but1.value = "Module 1 On ";
                 document.getElementById("div1").style.display='block';
             } else {
-                but1.value= "Module 1 On";
+                but1.value= "Module 1 Off ";
 
                 document.getElementById("div1").style.display='none';
             }
         }
         function button2(){
-            
+            but2 = document.getElementById("button2");
+
+            if (but2.value == "Module 2 Off "){
+                but2.value = "Module 2 On ";
+                document.getElementById("div2").style.display='block';
+            } else {
+                but2.value= "Module 2 Off ";
+
+                document.getElementById("div2").style.display='none';
+            }
         }
+        
+        function button3(){
+            but3 = document.getElementById("button3");
 
+            if (but3.value == "Module 3 Off "){
+                but3.value = "Module 3 On ";
+                document.getElementById("div3").style.display='block';
+            } else {
+                but3.value= "Module 3 Off ";
 
+                document.getElementById("div3").style.display='none';
+            }
+        }
+        function button4(){
+            but4 = document.getElementById("button4");
 
+            if (but4.value == "Module 4 Off "){
+                but4.value = "Module 4 On ";
+                document.getElementById("div4").style.display='block';
+            } else {
+                but4.value= "Module 4 Off ";
+
+                document.getElementById("div4").style.display='none';
+            }
+        }
+        function button5(){
+            but5 = document.getElementById("button5");
+
+            if (but5.value == "Module 5 Off "){
+                but5.value = "Module 5 On ";
+                document.getElementById("div5").style.display='block';
+            } else {
+                but5.value= "Module 5 Off ";
+
+                document.getElementById("div5").style.display='none';
+            }
+        }
+        function button6(){
+            but6 = document.getElementById("button6");
+
+            if (but6.value == "Module 6 Off "){
+                but6.value = "Module 6 On ";
+                document.getElementById("div6").style.display='block';
+            } else {
+                but6.value= "Module 6 Off ";
+
+                document.getElementById("div6").style.display='none';
+            }
+        }
+        
     </script>
 </body>
 </html>
