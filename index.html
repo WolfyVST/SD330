@@ -1,24 +1,29 @@
-<p> This is a code fragment for making a list of files in a GitHub repository.
-    <p> Borrowed from somewhere online 
-    <div id="files"></div>
-    <script>
-    function fileList(){
-      (async () => {
-        const response = await fetch("https://api.github.com/repos/WolfyVST/SD330/contents/");
-        const data = await response.json();
-        let htmlString = "<ul>";
-        for (let file of data) {
-          if (file.type == "file") {
-            let fname = file.name;
-            let fpath = "https://github.com/WolfyVST/SD330/blob/main/" + fname;
-            htmlString += "<li><a href='" + fpath + "'>" + fname + "</a></li>";
-          }
+<div style="display:flex;align-items:center;">
+    <img src="https://raw.githubusercontent.com/WolfyVST/SD330/main/Wolf_map.png" alt="avatar" style="width:100px;margin-right:20px;">
+    <div>
+      <h1>Ricardo's SD330 Repo</h1>
+      <p>Borrowed from somewhere online.</p>
+      <div id="files"></div>
+      <script>
+        function fileList() {
+          (async () => {
+            const response = await fetch("https://api.github.com/repos/WolfyVST/SD330/contents/");
+            const data = await response.json();
+            let htmlString = "<ul>";
+            for (let file of data) {
+              if (file.type == "file") {
+                let fname = file.name;
+                let fpath = "https://github.com/WolfyVST/SD330/blob/main/" + fname;
+                htmlString += "<li><a href='" + fpath + "'>" + fname + "</a></li>";
+              }
+            }
+            htmlString += '</ul>';
+            document.getElementById('files').innerHTML = htmlString;
+          })()
         }
-        htmlString += '</ul>';
-        document.getElementById('files').innerHTML = htmlString;
-      })()
-    }
-    fileList();
-    </script>
-    
-    
+        fileList();
+      </script>
+    </div>
+  </div>
+  
+
