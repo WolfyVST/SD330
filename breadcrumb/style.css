@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #9300e9;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Navigation bar */
+  nav {
+    background-color: #8f00ee;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: #fff;
+  }
+  
+  /* Breadcrumb */
+  .breadcrumb {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .breadcrumb a {
+    color: #0077c0;
+  }
+  
+  /* Buttons */
+  .button {
+    background-color: #a800f7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #005ca3;
+  }
+  
+  /* Specific page styles */
+  /* Home page */
+  .home-page {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* User account page */
+  .user-account-page {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  /* Settings page */
+  .settings-page {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  /* Password reset page */
+  .password-reset-page {
+    background-color: #fff;
+    padding: 20px;
+  }
