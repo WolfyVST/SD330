@@ -20,7 +20,7 @@
 	<main>
 		<section id="books">
 			<h2>Our Books</h2>
-			<ul>
+			<ul id="books-list">
 				<!-- Books will be added dynamically here -->
 			</ul>
 		</section>
@@ -30,6 +30,43 @@
 			<li>Ricaedo Villalobos</li>
 		</ul>
 	</footer>
-	<script src="script.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		  // Load the books data from JSON file
+		  fetch('data.json')
+		    .then(function(response) {
+		      return response.json();
+		    })
+		    .then(function(data) {
+		      // Get the list of books
+		      const booksList = document.getElementById('books-list');
+		      const books = data.books;
+
+		      // Iterate through the books and add them to the list
+		      for (const bookTitle in books) {
+		        if (books.hasOwnProperty(bookTitle)) {
+		          const book = books[bookTitle];
+		          const li = document.createElement('li');
+		          const img = document.createElement('img');
+		          const h3 = document.createElement('h3');
+		          const p = document.createElement('p');
+
+		          img.src = `images/${book.ISBN}.jpg`;
+		          img.alt = bookTitle;
+		          h3.textContent = bookTitle;
+		          p.textContent = book.Author;
+
+		          li.appendChild(img);
+		          li.appendChild(h3);
+		          li.appendChild(p);
+		          booksList.appendChild(li);
+		        }
+		      }
+		    })
+		    .catch(function(error) {
+		      console.log(`Error loading data: ${error}`);
+		    });
+		});
+	</script>
 </body>
 </html>

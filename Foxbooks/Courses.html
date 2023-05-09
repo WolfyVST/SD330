@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FoxBooks | Courses</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="mainMenu.html">Home</a></li>
+				<li><a href="books.html">Books</a></li>
+				<li><a href="courses.html">Courses</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section id="breadcrumb">
+		<p>You are here: <a href="index.html">Home</a> &raquo; <strong>Courses</strong></p>
+	</section>
+	<main>
+		<section id="courses">
+			<h2>Our Courses</h2>
+			<ul>
+				<!-- Courses will be added dynamically here -->
+			</ul>
+		</section>
+	</main>
+	<footer>
+		<ul>
+			<li>Ricardo Villalobos</li>
+		</ul>
+	</footer>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+    // Load the courses data from JSON file
+    fetch('data.json')
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            // Get the list of courses
+            const coursesList = document.querySelector('#courses ul');
+            const coursesData = data.coursesTypes;
+
+            // Iterate through the courses and add them to the list
+            for (const courseCode in coursesData) {
+                if (coursesData.hasOwnProperty(courseCode)) {
+                    const course = coursesData[courseCode];
+                    const li = document.createElement('li');
+                    const h3 = document.createElement('h3');
+                    const p1 = document.createElement('p');
+                    const p2 = document.createElement('p');
+
+                    h3.textContent = `${course.ID} - ${courseCode}`;
+                    p1.textContent = `Professor: ${course.Professor}`;
+                    p2.textContent = `Semester: ${course.semester}`;
+
+                    li.appendChild(h3);
+                    li.appendChild(p1);
+                    li.appendChild(p2);
+                    coursesList.appendChild(li);
+                }
+            }
+        })
+        .catch(function(error) {
+            console.log(`Error loading data: ${error}`);
+        });
+});
+	</script>
+</body>
+</html>
