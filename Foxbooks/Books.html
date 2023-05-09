@@ -21,8 +21,7 @@
 		<section id="books">
 			<h2>Our Books</h2>
 			<ul id="books-list">
-				<!-- Books will be added dynamically here -->
-			</ul>
+				
 		</section>
 	</main>
 	<footer>
@@ -32,17 +31,17 @@
 	</footer>
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
-		  // Load the books data from JSON file
+		  
 		  fetch('data.json')
 		    .then(function(response) {
 		      return response.json();
 		    })
 		    .then(function(data) {
-		      // Get the list of books
+		      
 		      const booksList = document.getElementById('books-list');
 		      const books = data.books;
 
-		      // Iterate through the books and add them to the list
+		      
 		      for (const bookTitle in books) {
 		        if (books.hasOwnProperty(bookTitle)) {
 		          const book = books[bookTitle];

@@ -21,7 +21,7 @@
 		<section id="courses">
 			<h2>Our Courses</h2>
 			<ul>
-				<!-- Courses will be added dynamically here -->
+				
 			</ul>
 		</section>
 	</main>
@@ -32,17 +32,16 @@
 	</footer>
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
-    // Load the courses data from JSON file
+    
     fetch('data.json')
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
-            // Get the list of courses
+           
             const coursesList = document.querySelector('#courses ul');
             const coursesData = data.coursesTypes;
 
-            // Iterate through the courses and add them to the list
             for (const courseCode in coursesData) {
                 if (coursesData.hasOwnProperty(courseCode)) {
                     const course = coursesData[courseCode];

@@ -62,17 +62,17 @@
 	</footer>
     <script>
 		document.addEventListener('DOMContentLoaded', function() {
-  // Load the books data from JSON file
+  
   fetch('data.json')
     .then(function(response) {
       return response.json();
     })
     .then(function(data) {
-      // Get the list of featured books
+      
       const featuredBooks = document.getElementById('books-list');
       const books = data.books;
 
-      // Iterate through the books and add them to the featured books list
+      
       for (const bookTitle in books) {
         if (books.hasOwnProperty(bookTitle)) {
           const book = books[bookTitle];
@@ -93,11 +93,11 @@
         }
       }
 
-      // Get the list of courses
+      
       const courses = document.getElementById('courses-list');
       const courseTypes = data.coursesTypes;
 
-      // Iterate through the course types and add them to the courses list
+      
       for (const courseCode in courseTypes) {
         if (courseTypes.hasOwnProperty(courseCode)) {
           const course = courseTypes[courseCode];
