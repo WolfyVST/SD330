@@ -1,0 +1,155 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Header */
+header {
+    background-color: #d90000;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #f2f2f2;
+}
+
+/* Banner */
+#banner {
+    background-color: white;
+    color: #d90000;
+    text-align: center;
+    padding: 50px;
+}
+
+#banner h1 {
+    margin-top: 0;
+}
+
+/* Breadcrumb */
+#breadcrumb {
+    background-color: #d90000;
+    color: white;
+    padding: 10px;
+}
+
+#breadcrumb a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Services */
+#services {
+    background-color: #f2f2f2;
+    padding: 50px;
+    text-align: center;
+}
+
+#services h2 {
+    margin-top: 0;
+}
+
+#services ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#services li {
+    display: inline-block;
+    margin-right: 20px;
+    width: 30%;
+    text-align: left;
+}
+
+#services li h3 {
+    margin-top: 0;
+}
+
+#services li p {
+    margin-bottom: 0;
+}
+
+/* Featured Books */
+#featured-books {
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+#featured-books h2 {
+    margin-top: 0;
+}
+
+#featured-books ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#featured-books li {
+    display: inline-block;
+    margin-right: 20px;
+    width: 30%;
+    text-align: left;
+}
+
+#featured-books li h3 {
+    margin-top: 0;
+}
+
+#featured-books li p {
+    margin-bottom: 0;
+}
+
+#featured-books li img {
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #d90000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #f2f2f2;
+}

@@ -1,0 +1,36 @@
+{
+    "coursesTypes": {
+        "Engl": {
+            "ID": "1111",
+            "semester": "Fall",
+            "Professor": "tokash"
+        },
+        "comp": {
+            "ID": "1112",
+            "semester": "Summer",
+            "Professor": "Hash"
+        },
+        "Math": {
+            "ID": "1113",
+            "semester": "Spring",
+            "Professor": "Evans"
+        }
+    },
+    "books": {
+        "Great gatsbey": {
+            "ISBN": "0-3688-5940-1",
+            "Author": "Adrew Tokash",
+            "courseID": "1111"
+        },
+        "how to cook a hashbrown": {
+            "ISBN": "0-9670-1747-5",
+            "Author": "Gordom Ramsey",
+            "courseID": "1112"
+        },
+        "How to train a dragon": {
+            "ISBN": "0-2149-5732-2",
+            "Author": "Mat Hashbrown",
+            "courseID": "1113"
+        }
+    }
+}
