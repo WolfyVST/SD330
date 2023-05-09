@@ -1,44 +1,46 @@
-<!DOCTYPE html>
+
+
+[4:11 PM]Boss Wolf: <!DOCTYPE html>
 <html>
 <head>
-	<title>FoxBooks | Courses</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <title>FoxBooks | Courses</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="mainMenu.html">Home</a></li>
-				<li><a href="books.html">Books</a></li>
-				<li><a href="courses.html">Courses</a></li>
-			</ul>
-		</nav>
-	</header>
-	<section id="breadcrumb">
-		<p>You are here: <a href="mainMenu.html">Home</a> &raquo; <strong>Courses</strong></p>
-	</section>
-	<main>
-		<section id="courses">
-			<h2>Our Courses</h2>
-			<ul>
-				
-			</ul>
-		</section>
-	</main>
-	<footer>
-		<ul>
-			<li>Ricardo Villalobos</li>
-		</ul>
-	</footer>
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="mainMenu.html">Home</a></li>
+                <li><a href="books.html">Books</a></li>
+                <li><a href="courses.html">Courses</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="breadcrumb">
+        <p>You are here: <a href="mainMenu.html">Home</a> &raquo; <strong>Courses</strong></p>
+    </section>
+    <main>
+        <section id="courses">
+            <h2>Our Courses</h2>
+            <ul>
+
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li>Ricardo Villalobos</li>
+        </ul>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
     fetch('data.json')
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
-           
+
             const coursesList = document.querySelector('#courses ul');
             const coursesData = data.coursesTypes;
 
@@ -50,9 +52,9 @@
                     const p1 = document.createElement('p');
                     const p2 = document.createElement('p');
 
-                    h3.textContent = `${course.ID} - ${courseCode}`;
-                    p1.textContent = `Professor: ${course.Professor}`;
-                    p2.textContent = `Semester: ${course.semester}`;
+                    h3.textContent = ${course.ID} - ${courseCode};
+                    p1.textContent = Professor: ${course.Professor};
+                    p2.textContent = Semester: ${course.semester};
 
                     li.appendChild(h3);
                     li.appendChild(p1);
@@ -62,9 +64,9 @@
             }
         })
         .catch(function(error) {
-            console.log(`Error loading data: ${error}`);
+            console.log(Error loading data: ${error});
         });
 });
-	</script>
+    </script>
 </body>
 </html>
